@@ -50,11 +50,11 @@ class AddContact extends Component {
               id={"phone"}
               value={this.state.phone}
               onChange={this.handleChange}
-              placeholder={"Enter phone no"}
+              placeholder={"Enter contact no."}
             />
           </div>
           <button className="center btn" type="submit">
-            Add
+            New Contact
           </button>
         </form>
       </div>

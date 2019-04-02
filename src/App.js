@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import AddContact from "./components/AddContact";
+// import AddContact from "./components/AddContact";
+import Contact from "./components/Contact";
+// import ContactList from "./components/ContactList";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -29,8 +31,12 @@ class App extends Component {
         <div className="App">
           <Navbar />
           <div className="container">
-            <h1 className="center ">My Contacts</h1>
-            <AddContact />
+            <h3 className="center ">My Contacts</h3>
+
+            <Contact
+              addContact={this.addContact}
+              contacts={this.state.contacts}
+            />
           </div>
         </div>
       </BrowserRouter>
