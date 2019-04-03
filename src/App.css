@@ -1,0 +1,7 @@
+body {
+  background: beige;
+  transition: all 1s;
+}
+btn {
+  align-self: auto;
+}

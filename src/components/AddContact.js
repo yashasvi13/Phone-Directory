@@ -1,16 +1,6 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 
 class AddContact extends Component {
-  constructor() {
-    super();
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-  static = {
-    onSubmit: PropTypes.func
-  };
-
   state = {
     name: "",
     phone: ""
@@ -18,7 +8,7 @@ class AddContact extends Component {
 
   handleChange = e => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.id]: e.target.value
     });
   };
   handleSubmit = e => {
@@ -31,7 +21,7 @@ class AddContact extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="cont">
         <form onSubmit={this.handleSubmit}>
           <label>Name:</label>
           <input
